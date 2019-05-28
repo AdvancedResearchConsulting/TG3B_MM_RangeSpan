@@ -1,0 +1,8 @@
+//sends a range command to the Triggerscope 3B, note firmware 557 required and a "black panel" TG3B also required
+
+//set the port value to whatever COM port the triggerscope is on
+port = "COM28";
+
+//send the command RANGE where the next # = the DAC output line, and the second # after then comma is the range value. See the expanded reference for more info on the command.
+mmc.setSerialPortCommand("COM28", "RANGE1,2", "\n");
+
